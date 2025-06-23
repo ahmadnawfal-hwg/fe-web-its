@@ -11,7 +11,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint . --ext .js,.ts,.vue",
     "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@nuxt/eslint": "1.4.1",
