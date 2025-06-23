@@ -15,6 +15,7 @@ This project is a Nuxt 3 starter codebase configured with commonly used modules 
 - [Nuxt ESLint Module](https://github.com/nuxt-modules/eslint) using **Airbnb Style Guide**
 - [Husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/okonet/lint-staged) for Git hooks
 - [Prettier](https://prettier.io/) for code formatting
+- [Commitizen](https://github.com/commitizen/cz-cli) for conventional commits
 
 ---
 
