@@ -1,5 +1,2 @@
 #!/usr/bin/env sh
-# TODO: Remove husky.sh when upgrading to Husky v10
-. "$(dirname -- "$0")/_/husky.sh"
-
 pnpm lint-staged
