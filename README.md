@@ -27,24 +27,15 @@ Page-level components should be placed under `components/pages`.
 
 ✅ Recommended:
 
-```
-
 components/pages/about/AboutBanner.vue
 components/pages/home/HomeHero.vue
 
-```
-
 ❌ Avoid:
-
-```
 
 components/pages/about/banner.vue
 components/pages/home/hero.vue
 
-```
-
 This aligns with [Vue Style Guide – Rule: Multi-word component names](https://vuejs.org/style-guide/rules-essential.html#multi-word-component-names).
-```
 ---
 
 ### 📁 `stores/*`
@@ -190,5 +181,3 @@ This ensures consistent and clean code before pushing.
 ---
 
 Happy coding! ✨
-
-```
