@@ -3,7 +3,15 @@ const { postStore, addPost, isLoadingAdd } = usePosts();
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto px-4 py-8">
+  <div v-if="postStore.isLoading">
+    <BaseLoading />
+  </div>
+
+  <div v-else-if="postStore.error" class="text-red-600 font-semibold">
+    Error: {{ postStore.error }}
+  </div>
+
+  <div v-else class="max-w-2xl mx-auto px-4 py-8">
     <h1 class="text-2xl font-bold mb-4">List Posts</h1>
 
     <button
@@ -14,15 +22,7 @@ const { postStore, addPost, isLoadingAdd } = usePosts();
       Add Post {{ isLoadingAdd ? '...' : '' }}
     </button>
 
-    <div v-if="postStore.isLoading" class="text-gray-500 italic">
-      Loading data...
-    </div>
-
-    <div v-else-if="postStore.error" class="text-red-600 font-semibold">
-      Error: {{ postStore.error }}
-    </div>
-
-    <ul v-else class="space-y-4">
+    <ul class="space-y-4">
       <li
         v-for="post in postStore.data"
         :key="post.id"

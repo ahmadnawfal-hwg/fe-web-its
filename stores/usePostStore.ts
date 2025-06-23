@@ -13,7 +13,7 @@ type PostPayload = Omit<Post, 'id'>;
 export const usePostStore = defineStore('post', {
   state: () => ({
     data: [] as Post[],
-    isLoading: false,
+    isLoading: true,
     error: null as string | null,
   }),
 
