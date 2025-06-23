@@ -19,6 +19,7 @@ This project is a Nuxt 3 starter codebase configured with commonly used modules 
 ---
 
 ## 🧱 Code Structure & Conventions
+
 ### 📁 `components/pages/*`
 
 Page-level components should be placed under `components/pages`.
@@ -36,6 +37,7 @@ components/pages/about/banner.vue
 components/pages/home/hero.vue
 
 This aligns with [Vue Style Guide – Rule: Multi-word component names](https://vuejs.org/style-guide/rules-essential.html#multi-word-component-names).
+
 ---
 
 ### 📁 `stores/*`
@@ -43,7 +45,6 @@ This aligns with [Vue Style Guide – Rule: Multi-word component names](https://
 All API calls are handled inside **Pinia stores** under the `stores` directory.
 
 Example:
-
 ```
 
 stores/usePostStore.ts
@@ -137,12 +138,12 @@ const { data, error, isLoading } = useFetchData();
 
 This project uses **Conventional Commit Messages** such as:
 
-* `feat`: a new feature
-* `fix`: a bug fix
-* `refactor`: code refactoring without changing behavior
-* `docs`: documentation changes
-* `chore`: tooling or config changes
-* `style`: code style changes (formatting, semi, etc.)
+- `feat`: a new feature
+- `fix`: a bug fix
+- `refactor`: code refactoring without changing behavior
+- `docs`: documentation changes
+- `chore`: tooling or config changes
+- `style`: code style changes (formatting, semi, etc.)
 
 Example:
 
@@ -173,8 +174,8 @@ pnpm dev
 
 Before each commit, Husky runs the following tasks via `lint-staged`:
 
-* ESLint fix
-* Prettier formatting
+- ESLint fix
+- Prettier formatting
 
 This ensures consistent and clean code before pushing.
 
