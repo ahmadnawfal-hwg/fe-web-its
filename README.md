@@ -37,6 +37,7 @@ components/pages/about/banner.vue
 components/pages/home/hero.vue
 
 This aligns with [Vue Style Guide – Rule: Multi-word component names](https://vuejs.org/style-guide/rules-essential.html#multi-word-component-names).
+```
 
 ---
 
@@ -45,11 +46,12 @@ This aligns with [Vue Style Guide – Rule: Multi-word component names](https://
 All API calls are handled inside **Pinia stores** under the `stores` directory.
 
 Example:
+
 ```
 
 stores/usePostStore.ts
 
-````
+```
 
 ### Store conventions:
 
@@ -118,7 +120,7 @@ export const usePostStore = defineStore('post', {
     },
   },
 });
-````
+```
 
 ---
 
@@ -182,3 +184,7 @@ This ensures consistent and clean code before pushing.
 ---
 
 Happy coding! ✨
+
+```
+
+```
