@@ -147,11 +147,21 @@ This project uses **Conventional Commit Messages** such as:
 - `chore`: tooling or config changes
 - `style`: code style changes (formatting, semi, etc.)
 
+### 🧑‍💻 Commit with Commitizen
+
+To ensure consistent commit messages, use:
+
+```bash
+pnpm commit
+```
+
+You’ll be prompted to select a commit type and write a meaningful message.
+
 Example:
 
 ```
-feat: add post creation action to post store
-fix: handle error in useApi composable
+feat(post): add post creation action to post store
+fix(api): handle error in useApi composable
 ```
 
 ---
