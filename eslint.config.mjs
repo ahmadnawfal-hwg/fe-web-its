@@ -86,6 +86,6 @@ export default withNuxt({
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'vue/html-indent': ['error', 2],
+    'vue/html-indent': 'off',
   },
 });
