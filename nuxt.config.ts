@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       apiBase: process.env.API_BASE || 'https://jsonplaceholder.typicode.com',
     },
   },
+  imports: {
+    dirs: ['composables'],
+  },
   vite: {
     plugins: [tailwindcss()],
   },
