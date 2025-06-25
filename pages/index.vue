@@ -110,8 +110,28 @@
           >
         </li>
       </ul>
+
+      <div class="mt-8 flex justify-center gap-4">
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-xl transition cursor-pointer"
+          @click="navigateTo('/posts')"
+        >
+          🔁 Go to CSR Page
+        </button>
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-xl transition cursor-pointer"
+          @click="navigateTo('/users')"
+        >
+          📦 Go to SSR Page
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const router = useRouter();
+const navigateTo = (path: string) => {
+  router.push(path);
+};
+</script>

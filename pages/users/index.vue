@@ -15,11 +15,9 @@ const {
 </script>
 
 <template>
-  <div v-if="pending">Loading...</div>
-  <div v-else-if="error">Error: {{ error.message }}</div>
-  <div v-else>
+  <AppPageWrapper :loading="pending" :error="error">
     <ul>
       <li v-for="user in users" :key="user.id">{{ user.name }}</li>
     </ul>
-  </div>
+  </AppPageWrapper>
 </template>
