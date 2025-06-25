@@ -1,31 +1,38 @@
 <template>
-  <!-- Fullscreen loading -->
   <div
-    v-if="mode === 'fullscreen'"
-    class="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center space-y-4"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900"
   >
-    <div
-      class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"
-    />
-    <slot name="message">
-      <p class="text-white text-sm font-medium animate-pulse">Loading...</p>
-    </slot>
-  </div>
+    <div class="flex flex-col items-center space-y-4">
+      <!-- Spinner -->
+      <svg
+        class="animate-spin h-10 w-10 text-blue-500"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        />
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+        />
+      </svg>
 
-  <!-- Button inline loading -->
-  <div v-else-if="mode === 'button'" class="inline-block">
-    <div
-      class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
-    />
+      <!-- Text -->
+      <p class="text-gray-500 dark:text-gray-300 text-sm">
+        Loading, please wait...
+      </p>
+    </div>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  mode: {
-    type: String,
-    default: 'fullscreen', // or 'button'
-    validator: (val) => ['fullscreen', 'button'].includes(val),
-  },
-});
+<script setup lang="ts">
+// No props for now, but you can add props like `message`, `color`, etc.
 </script>

@@ -8,13 +8,18 @@ type Post = {
   userId: number;
 };
 
+type errorResponse = {
+  statusCode: number;
+  message: string;
+};
+
 type PostPayload = Omit<Post, 'id'>;
 
 export const usePostStore = defineStore('post', {
   state: () => ({
     data: [] as Post[],
     isLoading: true,
-    error: null as string | null,
+    error: null as errorResponse | null,
   }),
 
   actions: {
@@ -28,7 +33,7 @@ export const usePostStore = defineStore('post', {
           this.data = res;
         },
         onError: (err) => {
-          this.error = typeof err === 'string' ? err : 'failed fetch data';
+          this.error = err;
         },
         onSettled: () => {
           this.isLoading = false;

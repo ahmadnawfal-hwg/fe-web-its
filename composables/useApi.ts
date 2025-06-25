@@ -24,7 +24,11 @@ export const useApi = () => {
       result = response.data;
       onSuccess?.(result);
     } catch (err: any) {
-      error = err.response?.data || err.message || err;
+      error = {
+        statusCode: err.response?.status || 500,
+        message:
+          err.response?.data?.message || err.message || 'An error occurred',
+      };
       onError?.(error);
     } finally {
       onSettled?.();
