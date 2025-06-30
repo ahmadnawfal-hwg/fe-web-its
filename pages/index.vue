@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-    <div class="max-w-3xl w-full bg-white rounded-2xl p-8 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+    <div class="max-w-3xl w-full rounded-2xl p-8 text-center">
+      <h1 class="text-5xl font-bold text-blue-600 mb-6">
         Nuxt 3 Codebase Starter by Ahmad Nawfal
       </h1>
       <p class="text-gray-600 text-lg mb-6">

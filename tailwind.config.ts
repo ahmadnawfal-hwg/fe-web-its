@@ -1,9 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
+    './composables/**/*.{js,ts}',
     './app.vue',
   ],
   theme: {
@@ -11,3 +13,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;
