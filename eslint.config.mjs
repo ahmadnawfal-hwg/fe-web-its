@@ -7,7 +7,7 @@ import vuePlugin from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 
 export default withNuxt({
-  ignores: ['**/node_modules/**', '.output', '.nuxt', 'dist'],
+  ignores: ['**/node_modules/**', '.output', '.nuxt', 'dist', 'commitlint.config.cjs', 'eslint.config.mjs'],
   plugins: {
     prettier: eslintPluginPrettier,
     '@typescript-eslint': pluginTs,
@@ -68,6 +68,9 @@ export default withNuxt({
       withDefaults: 'readonly',
       h: 'readonly',
       resolveComponent: 'readonly',
+
+      // Pinia
+      usePostStore: 'readonly',
     },
   },
   rules: {
