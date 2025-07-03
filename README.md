@@ -1,5 +1,5 @@
 ```markdown
-# Nuxt 3 Codebase Starter by Ahmad Nawfal
+# Nuxt 3 Codebase Starter
 
 This project is a Nuxt 3 starter codebase configured with commonly used modules and conventions to help you build modern frontend applications quickly and efficiently.
 
