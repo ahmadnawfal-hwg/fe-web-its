@@ -6,6 +6,7 @@ This project is a Nuxt 3 starter codebase configured with commonly used modules 
 ## 🧰 Tech Stack
 
 - [Nuxt 3](https://nuxt.com)
+- [Nuxt UI](https://ui.nuxt.com)
 - [Pinia](https://pinia.vuejs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Nuxt Image](https://image.nuxt.com/)
