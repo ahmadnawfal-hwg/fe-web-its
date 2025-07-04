@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      apiBase: process.env.API_BASE || 'https://jsonplaceholder.typicode.com',
+      apiBase: process.env.API_BASE,
     },
   },
   imports: {
