@@ -3,6 +3,11 @@ import { useUIStore } from '@/stores/useUIStore';
 
 const colorMode = useColorMode();
 const ui = useUIStore();
+
+const isMounted = ref(false);
+onMounted(() => {
+  isMounted.value = true;
+});
 </script>
 
 <template>
@@ -31,6 +36,7 @@ const ui = useUIStore();
 
     <div class="flex items-center gap-4">
       <UButton
+        v-if="isMounted"
         variant="ghost"
         :icon="
           colorMode.preference === 'dark'

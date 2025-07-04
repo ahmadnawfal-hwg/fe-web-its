@@ -9,6 +9,11 @@ const {
 
 const colorMode = useColorMode();
 
+const isMounted = ref(false);
+onMounted(() => {
+  isMounted.value = true;
+});
+
 definePageMeta({
   layout: 'login',
 });
@@ -17,6 +22,7 @@ definePageMeta({
 <template>
   <div class="w-full">
     <NuxtImg
+      v-if="isMounted"
       :src="
         colorMode.value === 'dark' ? '/logo-hwg-white.webp' : '/logo-hwg.png'
       "

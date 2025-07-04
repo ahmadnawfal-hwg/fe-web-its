@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@pinia/nuxt',
+    '@vueuse/nuxt',
   ],
   runtimeConfig: {
     public: {

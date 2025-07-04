@@ -1,10 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { useUIStore } from '@/stores/useUIStore';
 
 const colorMode = useColorMode();
 const ui = useUIStore();
+const isMounted = ref(false);
 
 onMounted(() => {
+  isMounted.value = true;
   ui.updateScreen();
   window.addEventListener('resize', ui.updateScreen);
 });
@@ -41,6 +43,7 @@ const links = [
       class="h-20 flex items-center justify-center px-4 border-b border-gray-200 dark:border-neutral-800"
     >
       <NuxtImg
+        v-if="isMounted"
         :src="
           colorMode.value === 'dark' ? '/logo-hwg-white.webp' : '/logo-hwg.png'
         "
