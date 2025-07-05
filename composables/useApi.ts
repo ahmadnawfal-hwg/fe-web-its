@@ -25,9 +25,12 @@ export const useApi = () => {
       onSuccess?.(result);
     } catch (err: any) {
       error = {
-        statusCode: err.response?.status || 500,
+        code: err.response?.data?.data?.code,
+        statusCode: err.response?.data?.data?.status || 500,
         message:
-          err.response?.data?.message || err.message || 'An error occurred',
+          err.response?.data?.data?.message ||
+          err.message ||
+          'An error occurred',
       };
       onError?.(error);
     } finally {

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import type { ApiCallbacks } from '~/types/api';
+import type { User } from '~/types/user';
 
 type LoginPayload = {
   username: string;
@@ -9,8 +10,21 @@ type LoginPayload = {
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     token: null as string | null,
+    user: null as User | null,
   }),
   actions: {
+    setToken(data: string | null) {
+      const cookie = useCookie<string | null>('token');
+      this.token = data;
+      cookie.value = data;
+    },
+    setUser(data: User | null) {
+      this.user = data;
+    },
+    loadToken() {
+      const cookie = useCookie<string | null>('token');
+      this.token = cookie.value;
+    },
     async onLogin(payload: LoginPayload, callbacks: ApiCallbacks = {}) {
       const api = useApi();
 
@@ -28,7 +42,8 @@ export const useAuthStore = defineStore('auth', {
       });
     },
     onLogout() {
-      this.token = null;
+      this.setToken(null);
+      this.setUser(null);
     },
   },
 });

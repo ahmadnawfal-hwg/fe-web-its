@@ -26,4 +26,5 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  plugins: ['~/plugins/init-auth.client.ts'],
 });

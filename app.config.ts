@@ -5,5 +5,10 @@ export default defineAppConfig({
       neutral: 'slate',
     },
     colorMode: 'system',
+    pagination: {
+      slots: {
+        list: 'flex flex-wrap items-center gap-1',
+      },
+    },
   },
 });

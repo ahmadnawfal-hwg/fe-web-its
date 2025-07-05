@@ -12,15 +12,8 @@ export default defineNuxtPlugin(() => {
   });
 
   instance.interceptors.request.use((req) => {
-    let token: string | undefined | null;
-
-    if (import.meta.server) {
-      const cookieHeader = useRequestHeaders()['cookie'];
-      const match = cookieHeader?.match(/token=([^;]+)/);
-      token = match?.[1];
-    } else {
-      token = useCookie('token').value;
-    }
+    const authStore = useAuthStore();
+    const token = authStore.token || useCookie('token').value;
 
     if (token) {
       req.headers.Authorization = `Bearer ${token}`;

@@ -67,7 +67,9 @@ const links = [
           ui.isCollapsed ? 'justify-center' : '',
         ]"
       >
-        <UIcon :name="link.icon" class="w-5 h-5" />
+        <UTooltip :text="link.label">
+          <UIcon :name="link.icon" class="w-5 h-5" />
+        </UTooltip>
         <span v-if="!ui.isCollapsed" class="truncate">{{ link.label }}</span>
       </NuxtLink>
     </nav>

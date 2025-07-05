@@ -1,22 +1,18 @@
 <script setup lang="ts">
-const {
-  schema,
-  state,
-  onSubmit,
-  isShowIconPassword,
-  togglePasswordVisibility,
-} = useLogin();
-
-const colorMode = useColorMode();
-
-const isMounted = ref(false);
-onMounted(() => {
-  isMounted.value = true;
-});
-
 definePageMeta({
   layout: 'login',
 });
+
+const {
+  schema,
+  form,
+  onSubmit,
+  isShowIconPassword,
+  togglePasswordVisibility,
+  isLoadingSubmit,
+  isMounted,
+  colorMode,
+} = useLogin();
 </script>
 
 <template>
@@ -37,10 +33,10 @@ definePageMeta({
       </p>
     </div>
 
-    <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <UForm :schema="schema" :state="form" class="space-y-4" @submit="onSubmit">
       <UFormField label="Username" name="username">
         <UInput
-          v-model="state.username"
+          v-model="form.username"
           class="w-full"
           placeholder="Enter your username"
           size="xl"
@@ -49,7 +45,7 @@ definePageMeta({
 
       <UFormField label="Password" name="password">
         <UInput
-          v-model="state.password"
+          v-model="form.password"
           class="w-full"
           placeholder="••••••••"
           size="xl"
@@ -73,7 +69,13 @@ definePageMeta({
         </UInput>
       </UFormField>
 
-      <UButton color="primary" size="xl" type="submit" class="mt-2" block
+      <UButton
+        :loading="isLoadingSubmit"
+        color="primary"
+        size="xl"
+        type="submit"
+        class="mt-2 cursor-pointer"
+        block
         >Submit</UButton
       >
     </UForm>

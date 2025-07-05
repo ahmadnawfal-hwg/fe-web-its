@@ -81,16 +81,16 @@ definePageMeta({
             <p class="opacity-80">ISP Provider</p>
             <p class="font-semibold">Baik</p>
             <div class="flex gap-2 items-center">
-              <UIcon name="i-lucide-link" class="text-gray-500" />
-              <span class="text-secondary">File</span>
+              <UIcon name="i-lucide-image" class="text-gray-500" />
+              <span class="text-secondary">Image</span>
             </div>
           </div>
           <div class="flex flex-col">
             <p class="opacity-80">Kecepatan Bandwitdth</p>
             <p class="font-semibold">Baik</p>
             <div class="flex gap-2 items-center">
-              <UIcon name="i-lucide-link" class="text-gray-500" />
-              <span class="text-secondary">File</span>
+              <UIcon name="i-lucide-image" class="text-gray-500" />
+              <span class="text-secondary">Image</span>
             </div>
           </div>
           <div class="flex flex-col">
@@ -119,16 +119,16 @@ definePageMeta({
             <p class="opacity-80">CPU</p>
             <p class="font-semibold">Baik</p>
             <div class="flex gap-2 items-center">
-              <UIcon name="i-lucide-link" class="text-gray-500" />
-              <span class="text-secondary">File</span>
+              <UIcon name="i-lucide-image" class="text-gray-500" />
+              <span class="text-secondary">Image</span>
             </div>
           </div>
           <div class="flex flex-col">
             <p class="opacity-80">SSD</p>
             <p class="font-semibold">Baik</p>
             <div class="flex gap-2 items-center">
-              <UIcon name="i-lucide-link" class="text-gray-500" />
-              <span class="text-secondary">File</span>
+              <UIcon name="i-lucide-image" class="text-gray-500" />
+              <span class="text-secondary">Image</span>
             </div>
           </div>
           <div class="flex flex-col">
